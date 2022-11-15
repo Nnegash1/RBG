@@ -55,7 +55,7 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun MultiplayerBox(vm: RBGViewModel, r: Int, b: Int, g: Int, modifier: Modifier = Modifier) {
-    var pickerValue = remember { mutableStateOf(0) }
+    val pickerValue = remember { mutableStateOf(0) }
 
     Box(
         modifier
@@ -79,7 +79,7 @@ fun MultiplayerBox(vm: RBGViewModel, r: Int, b: Int, g: Int, modifier: Modifier 
                 pickerValue.value = it
             },
             textStyle = TextStyle(fontSize = 30.sp),
-            range = 0..10
+            range = 1..10
         )
         Box(
             modifier
